@@ -24,10 +24,18 @@ h3 {
   text-transform: uppercase;
   font-weight: 300;
 }
+p {
+  font-family: "Alata", sans-serif;
+  font-size: 1rem;
+  color: var(--Very-Dark-Gray);
+}
 button {
   background: transparent;
   border: none;
   cursor: pointer;
+}
+picture img {
+  width: 100%;
 }
 /* 
 =============================
@@ -45,6 +53,7 @@ nav {
   display: flex;
   align-items: baseline;
   justify-content: center;
+  margin-bottom: 3rem;
 }
 .nav-links {
   display: none;
@@ -72,3 +81,45 @@ nav {
   width: 50%;
   font-size: 3rem;
 }
+/* 
+=============================
+=============================
+        main section 
+=============================
+=============================
+*/
+main {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+/* 
+=============================
+=============================
+        interactive VR 
+=============================
+=============================
+*/
+.vr-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+.interactive-text {
+  width: 80%;
+}
+.interactive-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+/* 
+=============================
+=============================
+        creations section 
+=============================
+=============================
+*/
