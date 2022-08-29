@@ -8,11 +8,17 @@
   --Black: hsl(0, 0%, 0%);
   --Dark-Gray: hsl(0, 0%, 55%);
   --Very-Dark-Gray: hsl(0, 0%, 41%);
-  --overlay-gradient: linear-gradient(
+  --overlay-gradient-mobile: linear-gradient(
     to right,
     rgba(0, 0, 0, 0.7),
     rgba(0, 0, 0, 0)
   );
+  --overlay-gradient-desktop: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0)
+  );
+  --overlay-hover: rgba(255, 255, 255, 0.507);
   font-size: 15px;
   font-family: "Josefin Sans", sans-serif;
   font-family: "Alata", sans-serif;
@@ -114,6 +120,24 @@ nav::before {
     width: min(90%, 74.5em);
     align-items: flex-start;
   }
+  .navbar-link {
+    position: relative;
+    transition: 0.5s;
+  }
+  .navbar-link::after {
+    content: "";
+    width: 0%;
+    position: absolute;
+    bottom: -0.7em;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 0.15rem solid var(--White);
+    transition: 0.5s;
+  }
+  .navbar-link:hover::after {
+    width: 50%;
+  }
+  /* hero text */
   .hero-text {
     width: min(100%, 37.8em);
     padding: 3rem;
@@ -138,6 +162,11 @@ main {
   gap: 4rem;
   margin-bottom: 8rem;
 }
+@media (min-width: 66.66em) {
+  main {
+    width: min(90%, 65.2em);
+  }
+}
 /* 
 =============================
 =============================
@@ -151,6 +180,7 @@ main {
   align-items: center;
   gap: 2rem;
   text-align: center;
+  position: relative;
 }
 .interactive-text {
   width: 80%;
@@ -158,6 +188,23 @@ main {
 .interactive-text h2 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
+}
+@media (min-width: 66.66em) {
+  .vr-section {
+    flex-direction: row;
+  }
+  .interactive-text {
+    width: min(70%, 37.5em);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: var(--White);
+    padding: 4em 4em 1em;
+  }
+  .interactive-text h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
 }
 /* 
 =============================
@@ -190,6 +237,7 @@ main {
 }
 .item {
   position: relative;
+  cursor: pointer;
 }
 .item::before {
   position: absolute;
@@ -198,7 +246,8 @@ main {
   height: 100%;
   top: 0;
   left: 0;
-  background: var(--overlay-gradient);
+  background: var(--overlay-gradient-mobile);
+  transition: 0.5s;
 }
 .item h3 {
   color: white;
@@ -207,6 +256,41 @@ main {
   left: 1rem;
   font-size: 2rem;
   width: 40%;
+  transition: 0.5s;
+}
+.item:hover h3 {
+  color: var(--Black);
+}
+.item:hover::before {
+  background: var(--overlay-hover);
+}
+@media (min-width: 66.66em) {
+  .creations-section {
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(3, auto);
+    gap: 1rem;
+  }
+  .title {
+    grid-column: 1 / span 3;
+  }
+  .title h2 {
+    text-align: left;
+  }
+  .see-all-btn-container {
+    grid-column: 4;
+    grid-row: 1;
+    place-items: end;
+  }
+  .item picture {
+    height: 100%;
+    display: flex;
+  }
+  .item picture img {
+    object-fit: cover;
+  }
+  .item::before {
+    background: var(--overlay-gradient-desktop);
+  }
 }
 /* 
 =============================
