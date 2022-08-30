@@ -70,7 +70,7 @@ nav {
   display: flex;
   align-items: baseline;
   justify-content: center;
-  margin-bottom: 3rem;
+  margin-bottom: 10.73rem;
   position: relative;
 }
 nav::before {
@@ -112,15 +112,20 @@ nav::before {
 @media (min-width: 56.66em) {
   .nav-links {
     display: flex;
-    gap: 2.5em;
+    gap: 2.33em;
+    color: var(--White);
+    opacity: 0.8;
+    font-weight: 400;
   }
   .sidemenu-btn {
     display: none;
   }
+  .nav-bar {
+    margin-bottom: 8.6rem;
+  }
   .nav-center {
     width: min(90%, 74.14em);
     align-items: flex-start;
-    height: min(80%, 29.4rem);
   }
   .navbar-link {
     position: relative;
@@ -145,8 +150,9 @@ nav::before {
     padding: 2.66rem 3.13rem;
   }
   .hero-text h1 {
-    width: min(80%, 8.7em);
-    font-size: 3.4rem;
+    width: 100%;
+    font-size: 4.63rem;
+    font-weight: 300;
   }
 }
 /* 
@@ -166,7 +172,9 @@ main {
 }
 @media (min-width: 56.66em) {
   main {
-    width: min(90%, 65.2em);
+    width: min(90%, 74.14em);
+    margin-bottom: 12.26rem;
+    gap: 0;
   }
 }
 /* 
@@ -194,6 +202,7 @@ main {
 @media (min-width: 56.66em) {
   .vr-section {
     flex-direction: row;
+    margin-bottom: 12.26rem;
   }
   .interactive-text {
     width: min(70%, 37.5em);
@@ -201,10 +210,11 @@ main {
     right: 0;
     bottom: 0;
     background: var(--White);
-    padding: 4em 4em 1em;
+    padding: 6.53em 5.4em 0.13em 6.4em;
+    text-align: left;
   }
   .interactive-text h2 {
-    font-size: 3rem;
+    font-size: 3.09rem;
     margin-bottom: 1.5rem;
   }
 }
@@ -223,7 +233,7 @@ main {
 }
 .creations-section h2 {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 3.09rem;
 }
 .see-all-btn-container {
   grid-row: 10;
@@ -237,6 +247,7 @@ main {
   font-family: "Alata", sans-serif;
   font-weight: 300;
   transition: 0.5s;
+  font-size: 1rem;
 }
 .see-all-btn-container button:hover {
   background: var(--Black);
@@ -259,10 +270,10 @@ main {
 .item h3 {
   color: white;
   position: absolute;
-  bottom: 1rem;
-  left: 1rem;
-  font-size: 2rem;
-  width: 40%;
+  bottom: 2.46rem;
+  left: 2.66rem;
+  font-size: 2.09rem;
+  width: 60%;
   transition: 0.5s;
 }
 .item:hover h3 {
@@ -303,7 +314,7 @@ main {
   .creations-section {
     grid-template-columns: repeat(4, auto);
     grid-template-rows: repeat(3, auto);
-    gap: 1rem;
+    gap: 2rem;
   }
   .title {
     grid-column: 1 / span 3;
@@ -315,6 +326,7 @@ main {
     grid-column: 4;
     grid-row: 1;
     place-items: end;
+    margin-bottom: 3.46rem;
   }
   .item picture {
     height: 100%;
@@ -399,10 +411,11 @@ footer p {
     display: grid;
     place-items: center;
     grid-template-columns: 100%;
-    padding-bottom: 4rem;
+    padding-top: 2.93rem;
+    padding-bottom: 3.2rem;
   }
   .footer-center {
-    width: min(90%, 65.2em);
+    width: min(90%, 74.14em);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -415,17 +428,18 @@ footer p {
   }
   .footer-links {
     flex-direction: row;
-    gap: 1rem;
+    gap: 2.26rem;
   }
   footer p {
     width: 100%;
     text-align: right;
+    color: var(--Dark-Gray);
   }
   .socials-container {
     width: 80%;
     place-self: end;
     justify-content: flex-end;
-    gap: 2rem;
+    gap: 1rem;
   }
 }
 /* 
