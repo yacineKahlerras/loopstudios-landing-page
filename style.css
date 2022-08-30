@@ -15,7 +15,7 @@
   );
   --overlay-gradient-desktop: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.4),
     rgba(0, 0, 0, 0)
   );
   --overlay-hover: rgba(255, 255, 255, 0.507);
@@ -404,6 +404,9 @@ footer p {
   .footer-links {
     flex-direction: row;
     gap: 1rem;
+  }
+  .footer-logo {
+    width: 9.6rem;
   }
 }
 @media (min-width: 56.66em) {
